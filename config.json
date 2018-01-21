@@ -17,7 +17,6 @@
         "DLDIR" : "DL_DIR = '/srv/www/vhosts/autobuilder.yoctoproject.org/current_sources'",
         "SSTATEDIR" : ["SSTATE_DIR ?= '/srv/www/vhosts/autobuilder.yoctoproject.org/pub/sstate'"],
         "SSTATEDIR_RELEASE" : ["SSTATE_MIRRORS += 'file://.* file:///srv/www/vhosts/autobuilder.yoctoproject.org/pub/sstate/PATH'", "SSTATE_DIR ?= '/srv/www/vhosts/downloads.yoctoproject.org/sstate/@RELEASENUM@'"],
-        "SDKEXTRAS" : ["SSTATE_MIRRORS += '\\", "file://.* http://sstate.yoctoproject.org/dev/@RELEASENUM@PATH;downloadfilename=PATH'"],
         "BUILDINFO" : false,
         "BUILDINFOVARS" : ["INHERIT += 'image-buildinfo'", "IMAGE_BUILDINFO_VARS_append = ' IMAGE_BASENAME IMAGE_NAME'"],
         "WRITECONFIG" : true,
@@ -35,9 +34,7 @@
             "BB_TASK_IONICE_LEVEL_task-testimage = '2.1'",
             "INHERIT += 'testimage'",
             "TEST_QEMUBOOT_TIMEOUT = '1500'",
-            "SANITY_TESTED_DISTROS = ''",
-            "SDK_EXT_TYPE = 'minimal'",
-            "SDK_INCLUDE_TOOLCHAIN = '1'"
+            "SANITY_TESTED_DISTROS = ''"
         ]
     },
 
