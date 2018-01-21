@@ -102,11 +102,11 @@
             "MACHINE" : "qemuarm",
             "TEMPLATE" : "nightly-arch",
             "step2" : {
-                "MACHINE" : "beaglebone-yocto",
+                "MACHINE" : "beaglebone",
                 "BBTARGETS" : "core-image-sato core-image-sato-dev core-image-sato-sdk core-image-minimal core-image-minimal-dev core-image-sato-sdk-ptest core-image-sato:do_populate_sdk"
             },
             "step5" : {
-                "MACHINE" : "beaglebone-yocto",
+                "MACHINE" : "beaglebone",
                 "SDKMACHINE" : "x86_64",
                 "BBTARGETS" : "core-image-minimal:do_populate_sdk_ext core-image-sato:do_populate_sdk"
             }
@@ -115,7 +115,7 @@
             "MACHINE" : "qemuarm",
             "TEMPLATE" : "nightly-lsb",
             "step2" : {
-                "MACHINE" : "beaglebone-yocto"
+                "MACHINE" : "beaglebone"
             }
         },
         "nightly-arm64" : {
@@ -496,7 +496,7 @@
             "extravars" : [
                 "RPM_GPG_SIGN_CHUNK = '1'"
             ],
-            "EXTRACMDS" : ["checkvnc; DISPLAY=:1 oe-selftest --skip-tests distrodata.Distrodata.test_checkpkg"],
+            "EXTRACMDS" : ["checkvnc; DISPLAY=:1 oe-selftest --run-all-tests"],
             "ADDLAYER" : ["${BUILDDIR}/../meta-selftest"]
         },
         "nightly-refkit" : {

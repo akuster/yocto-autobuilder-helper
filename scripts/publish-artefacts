@@ -49,22 +49,22 @@ case "$target" in
         md5sums $TMPDIR/deploy/images/qemuarm
         cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/qemuarm/*qemuarm* $DEST/machines/qemu/qemuarm
         cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/qemuarm/*Image* $DEST/machines/qemu/qemuarm
-        mkdir -p $DEST/machines/beaglebone-yocto
-        md5sums $TMPDIR/deploy/images/beaglebone-yocto
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone-yocto/*Image* $DEST/machines/beaglebone-yocto
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone-yocto/*u-boot* $DEST/machines/beaglebone-yocto
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone-yocto/*beaglebone-yocto* $DEST/machines/beaglebone-yocto
+        mkdir -p $DEST/machines/beaglebone
+        md5sums $TMPDIR/deploy/images/beaglebone
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone/*Image* $DEST/machines/beaglebone
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone/*u-boot* $DEST/machines/beaglebone
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone/*beaglebone* $DEST/machines/beaglebone
         ;;
     "nightly-arm-lsb")
         mkdir -p $DEST/machines/qemu/qemuarm-lsb
         md5sums $TMPDIR/deploy/images/qemuarm
         cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/qemuarm/*qemuarm* $DEST/machines/qemu/qemuarm-lsb
         cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/qemuarm/*Image* $DEST/machines/qemu/qemuarm-lsb
-        mkdir -p $DEST/machines/beaglebone-yocto-lsb
-        md5sums $TMPDIR/deploy/images/beaglebone-yocto
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone-yocto/*Image* $DEST/machines/beaglebone-yocto-lsb
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone-yocto/*u-boot* $DEST/machines/beaglebone-yocto-lsb
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone-yocto/*beaglebone-yocto* $DEST/machines/beaglebone-yocto-lsb
+        mkdir -p $DEST/machines/beaglebone-lsb
+        md5sums $TMPDIR/deploy/images/beaglebone
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone/*Image* $DEST/machines/beaglebone-lsb
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone/*u-boot* $DEST/machines/beaglebone-lsb
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/images/beaglebone/*beaglebone* $DEST/machines/beaglebone-lsb
         ;;
     "nightly-mips64")
         mkdir -p $DEST/machines/qemu/qemumips64
