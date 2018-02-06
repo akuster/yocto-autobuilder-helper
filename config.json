@@ -436,7 +436,7 @@
             }
         },
         "nightly-non-gpl3" : {
-            "NEEDREPOS" : ["poky", "meta-gplv2"],
+            "NEEDREPOS" : ["poky"],
             "MACHINE" : "qemux86",
             "BBTARGETS" : "core-image-minimal core-image-full-cmdline",
             "extravars" : [
