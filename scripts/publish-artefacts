@@ -106,20 +106,20 @@ case "$target" in
     "nightly-wic")
         mkdir -p $DEST/machines/qemu/qemux86
         md5sums $TMPDIR/deploy/wic_images/qemux86
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86/*/*/*.direct $DEST/machines/qemu/qemux86
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86/*/*/*.direct.md5sum $DEST/machines/qemu/qemux86
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86/*/*/build/*.direct $DEST/machines/qemu/qemux86
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86/*/*/build/*.direct.md5sum $DEST/machines/qemu/qemux86
         mkdir -p $DEST/machines/genericx86
         md5sums $TMPDIR/deploy/wic_images/genericx86
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86/*/*/*.direct $DEST/machines/genericx86
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86/*/*/*.direct.md5sum $DEST/machines/genericx86
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86/*/*/build/*.direct $DEST/machines/genericx86
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86/*/*/build/*.direct.md5sum $DEST/machines/genericx86
         mkdir -p $DEST/machines/qemu/qemux86-64
         md5sums $TMPDIR/deploy/wic_images/qemux86-64
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86-64/*/*/*.direct $DEST/machines/qemu/qemux86-64
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86-64/*/*/*.direct.md5sum $DEST/machines/qemu/qemux86-64
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86-64/*/*/build/*.direct $DEST/machines/qemu/qemux86-64
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/qemux86-64/*/*/build/*.direct.md5sum $DEST/machines/qemu/qemux86-64
         mkdir -p $DEST/machines/genericx86-64
         md5sums $TMPDIR/deploy/wic_images/genericx86-64
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86-64/*/*/*.direct $DEST/machines/genericx86-64
-        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86-64/*/*/*.direct.md5sum $DEST/machines/genericx86-64
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86-64/*/*/build/*.direct $DEST/machines/genericx86-64
+        cp -R --no-dereference --preserve=links $TMPDIR/deploy/wic_images/genericx86-64/*/*/build/*.direct.md5sum $DEST/machines/genericx86-64
         ;;
     "nightly-x86-64")
         mkdir -p $DEST/machines/qemu/qemux86-64
