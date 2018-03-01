@@ -631,7 +631,7 @@
             "WRITECONFIG" : false,
             "SENDERRORS" : false,
             "EXTRAPLAINCMDS" : [
-                "cd scripts; ./setup.sh; ECLIPSE_HOME=`pwd`/eclipse/ ./build.sh neon/rocko rocko development"
+                "cd scripts; ./setup.sh; ECLIPSE_HOME=`pwd`/eclipse/ ./build.sh neon/pyro pyro development"
             ]
 
         },
@@ -640,7 +640,7 @@
             "WRITECONFIG" : false,
             "SENDERRORS" : false,
             "EXTRAPLAINCMDS" : [
-                "cd scripts; ./setup.sh; ECLIPSE_HOME=`pwd`/eclipse/ ./build.sh oxygen/rocko rocko development"
+                "cd scripts; ./setup.sh; ECLIPSE_HOME=`pwd`/eclipse/ ./build.sh oxygen/pyro pyro development"
             ]
         },
         "nightly" : {
