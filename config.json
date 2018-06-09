@@ -1,17 +1,17 @@
 {
     "build-history-targets" : ["nightly-arm64", "nightly-arm", "nightly-arm-lsb", "nightly-mips64", "nightly-mips", "nightly-mips-lsb", "nightly-ppc", "nightly-ppc-lsb", "nightly-x86-64", "nightly-x86-64-lsb", "nightly-x86", "nightly-x86-lsb"],
-    "BUILD_HISTORY_DIR" : "/home/buildbot/autobuilder.yoctoproject.org/buildhistory",
+    "BUILD_HISTORY_DIR" : "/build/buildhistory",
     "BUILD_HISTORY_REPO" : "ssh://git@push.yoctoproject.org/poky-buildhistory",
     "BUILD_HISTORY_DIRECTPUSH" : ["poky:morty", "poky:pyro", "poky:rocko", "poky:master"],
     "BUILD_HISTORY_FORKPUSH" : {"poky-contrib:ross/mut" : "poky:master", "poky:master-next" : "poky:master"},
 
-    "REPO_STASH_DIR" : "/home/buildbot/git/mirror",
-    "TRASH_DIR" : "/home/buildbot/git/trash",
+    "REPO_STASH_DIR" : "/build/git/mirror",
+    "TRASH_DIR" : "/build/git/trash",
 
     "QAMAIL_TO" : "akuster808@gmail.com",
     "QAMAIL_TO1" : "akuster808@gmail.com",
     "QAMAIL_CC1" : "akuster808@gmail.com",
-    "WEBPUBLISH_DIR" : "/home/buildbot/autobuilder.yoctoproject.org/",
+    "WEBPUBLISH_DIR" : "/build/autobuilder.yoctoproject.org/",
     "WEBPUBLISH_URL" : "https://autobuilder.yocto.io/",
 
     "defaults" : {
@@ -20,9 +20,9 @@
         "SDKMACHINE" : "i686",
         "PACKAGE_CLASSES" : "package_rpm package_deb package_ipk",
         "PRSERV" : "PRSERV_HOST = 'localhost:0'",
-        "DLDIR" : "DL_DIR = '/home/buildbot/autobuilder.yoctoproject.org/current_sources'",
-        "SSTATEDIR" : ["SSTATE_DIR ?= '/home/buildbot/autobuilder.yoctoproject.org/pub/sstate'"],
-        "SSTATEDIR_RELEASE" : ["SSTATE_MIRRORS += 'file://.* file:///home/buildbot/autobuilder.yoctoproject.org/pub/sstate/PATH'", "SSTATE_DIR ?= '/home/buildbot/downloads.yoctoproject.org/sstate/@RELEASENUM@'"],
+        "DLDIR" : "DL_DIR = '/build/downloads'",
+        "SSTATEDIR" : ["SSTATE_DIR ?= '/build/sstate'"],
+        "SSTATEDIR_RELEASE" : ["SSTATE_MIRRORS += 'file://.* file:///build/sstate/PATH'", "SSTATE_DIR ?= '/build/sstate/@RELEASENUM@'"],
         "SDKEXTRAS" : ["SSTATE_MIRRORS += '\\", "file://.* http://sstate.yoctoproject.org/dev/@RELEASENUM@PATH;downloadfilename=PATH'"],
         "BUILDINFO" : false,
         "BUILDINFOVARS" : ["INHERIT += 'image-buildinfo'", "IMAGE_BUILDINFO_VARS_append = ' IMAGE_BASENAME IMAGE_NAME'"],
@@ -435,7 +435,7 @@
             "extravars" : [
                 "SOURCE_MIRROR_FETCH = '1'",
                 "INHERIT += 'own-mirrors'",
-                "SOURCE_MIRROR_URL = 'file:///home/buildbot/autobuilder.yoctoproject.org/current_sources'"
+                "SOURCE_MIRROR_URL = 'file:///build/downloads'"
             ],
             "step1" : {
                 "BBTARGETS" : "universe -k -c fetch"
