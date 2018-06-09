@@ -8,3 +8,20 @@ to .git/hooks/pre-commit (ln -s ../../scripts/pre-commit-hook.sh .git/hooks/pre-
 Authors: 
   Richard Purdie <richard.purdie@linuxfoundation.org>
   Joshua Lock <joshua.g.lock@intel.com>
+
+
+WORKER:
+
+kvm:
+sudo modprobe kvm-intel
+sudo groupadd --system kvm
+sudo gpasswd -a $USER kvm
+sudo chown root:kvm /dev/kvm
+sudo chmod 0660 /dev/kvm
+
+sudo --login buildbot
+sudo gpasswd -a $USER kvm
+
+sudo:
+
+buildbot ALL=NOPASSWD:ALL
